@@ -1,0 +1,758 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23510,        749]
+NotebookOptionsPosition[     22217,        703]
+NotebookOutlinePosition[     22555,        718]
+CellTagsIndexPosition[     22512,        715]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Longitudinal impedance of two-layer tube", "Title",
+ CellChangeTimes->{{3.8453540980817957`*^9, 3.845354101989089*^9}}],
+
+Cell["", "Author",
+ CellChangeTimes->{{3.8453541140264397`*^9, 3.845354114029499*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"1", "/", "r"}], 
+    RowBox[{"\[DifferentialD]", 
+     RowBox[{"/", 
+      RowBox[{"\[DifferentialD]", 
+       RowBox[{"r", "(", 
+        RowBox[{"r", " ", 
+         RowBox[{
+          RowBox[{"\[DifferentialD]", " ", 
+           SuperscriptBox["E", "i"]}], "/", 
+          RowBox[{"\[DifferentialD]", "r"}]}]}]}]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      SubscriptBox["\[Chi]", "i"]}], " ", 
+     SuperscriptBox[
+      SubscriptBox["E", "z"], "i"]}], "=", 
+    FractionBox[
+     RowBox[{"j", " ", 
+      SuperscriptBox[
+       SubscriptBox["\[Chi]", "i"], "2"]}], 
+     RowBox[{"k", " ", 
+      SubscriptBox["\[Epsilon]", "i"]}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Institution",
+ CellChangeTimes->{{3.8453541369283447`*^9, 3.845354149697019*^9}, {
+  3.8453542004276123`*^9, 3.845354234914736*^9}, {3.8453543252082453`*^9, 
+  3.845354374172059*^9}, {3.845354446285122*^9, 3.845354554050372*^9}, {
+  3.8453546697045727`*^9, 3.845354693343958*^9}}],
+
+Cell["", "InlineFormula",
+ CellChangeTimes->{{3.8453545575115*^9, 3.845354557511832*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Filed equations ", "Section",
+ CellChangeTimes->{
+  3.8453545575115*^9, {3.84535470336187*^9, 3.845354735873679*^9}, {
+   3.845360217749984*^9, 3.845360222773836*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"G", "[", "1", "]"}], "=", 
+   RowBox[{"\[ImaginaryI]", " ", 
+    RowBox[{"\[Rho]", " ", "/", 
+     RowBox[{"(", 
+      RowBox[{"k", " ", 
+       SubscriptBox["\[Epsilon]", 
+        RowBox[{"0", " "}]]}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["E", "z"], "[", 
+    RowBox[{"r_", ",", " ", "1"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"F", "[", "1", "]"}], 
+     RowBox[{"BesselI", "[", 
+      RowBox[{"0", ",", 
+       RowBox[{"\[Lambda]", " ", "r"}]}], "]"}]}], "+", "G"}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["E", "z"], "[", 
+     RowBox[{"r_", ",", " ", "i_"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"F", "[", "i", "]"}], 
+      RowBox[{"R", "[", 
+       RowBox[{"r", ",", " ", "i"}], "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"G", "[", "i", "]"}], " ", 
+      RowBox[{"S", "[", 
+       RowBox[{"r", ",", " ", "i"}], "]"}]}]}]}], " ", ";", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"i", "=", "2"}], ",", "3", ",", "4"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["E", "z"], "[", 
+     RowBox[{"r_", ",", " ", "5"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"F", "[", "5", "]"}], " ", 
+     RowBox[{"BesselK", "[", 
+      RowBox[{"0", ",", " ", 
+       RowBox[{"\[Lambda]", " ", "r"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "[", 
+     RowBox[{"r_", ",", "i_"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"BesselK", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+         RowBox[{"a", "[", "i", "]"}]}]}], "]"}], " ", 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", " ", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+         RowBox[{"a", "[", "i", "]"}]}]}], "]"}], " ", 
+      RowBox[{"BesselK", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"S", "[", 
+     RowBox[{"r_", ",", "i_"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"BesselK", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{
+          RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+          RowBox[{"a", "[", "i", "]"}]}]}], "]"}]}], " ", 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"BesselI", "[", 
+       RowBox[{"1", ",", " ", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+         RowBox[{"a", "[", "i", "]"}]}]}], "]"}], " ", 
+      RowBox[{"BesselK", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Rp", "[", 
+     RowBox[{"r_", ",", "i_"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"BesselK", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+         RowBox[{"a", "[", "i", "]"}]}]}], "]"}], " ", 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"BesselI", "[", 
+       RowBox[{"0", ",", " ", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+         RowBox[{"a", "[", "i", "]"}]}]}], "]"}], " ", 
+      RowBox[{"BesselK", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sp", "[", 
+     RowBox[{"r_", ",", "i_"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"BesselK", "[", 
+        RowBox[{"1", ",", 
+         RowBox[{
+          RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+          RowBox[{"a", "[", "i", "]"}]}]}], "]"}]}], " ", 
+      RowBox[{"BesselI", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"BesselI", "[", 
+       RowBox[{"1", ",", " ", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", 
+         RowBox[{"a", "[", "i", "]"}]}]}], "]"}], " ", 
+      RowBox[{"BesselK", "[", 
+       RowBox[{"1", ",", 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "i", "]"}], " ", "r"}]}], "]"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8453547466002197`*^9, 3.8453547704689493`*^9}, {
+  3.845355940310121*^9, 3.845355990083809*^9}, {3.8453590857735863`*^9, 
+  3.8453591426913548`*^9}, {3.845359222240347*^9, 3.8453592291005297`*^9}, {
+  3.845359974295089*^9, 3.845360095777705*^9}, {3.845360131689623*^9, 
+  3.8453602133238487`*^9}, {3.845360410588258*^9, 3.845360421755535*^9}, {
+  3.84536046572543*^9, 3.845360646420689*^9}, {3.845360717677023*^9, 
+  3.845360872956407*^9}, {3.845361103925652*^9, 3.845361120399725*^9}, {
+  3.845361208576468*^9, 3.84536120986574*^9}, {3.845361618739552*^9, 
+  3.8453617200963373`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"U", "=", " ", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["a", "2"], "2"], "-", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"2", " ", 
+         RowBox[{"a", "[", "2", "]"}], 
+         RowBox[{"\[Epsilon]", "[", "3", "]"}]}], 
+        RowBox[{
+         RowBox[{"\[Chi]", "[", "3", "]"}], 
+         SubscriptBox["\[Epsilon]", "0"]}]], "  ", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[Epsilon]", "[", "3", "]"}], 
+          RowBox[{"\[Chi]", "[", "4", "]"}], " ", 
+          RowBox[{"R", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "3", "]"}], ",", "4"}], "]"}], " ", 
+          RowBox[{"Sp", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "2", "]"}], ",", "3"}], "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"\[Epsilon]", "[", "4", "]"}], " ", 
+          RowBox[{"\[Chi]", "[", "3", "]"}], " ", 
+          RowBox[{"Rp", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "2", "]"}], ",", "3"}], "]"}], " ", 
+          RowBox[{"Rp", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "3", "]"}], ",", "4"}], "]"}]}]}], 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[Epsilon]", "[", "3", "]"}], 
+          RowBox[{"\[Chi]", "[", "4", "]"}], " ", 
+          RowBox[{"R", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "3", "]"}], ",", "4"}], "]"}], " ", 
+          RowBox[{"S", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "2", "]"}], ",", "3"}], "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"\[Epsilon]", "[", "4", "]"}], " ", 
+          RowBox[{"\[Chi]", "[", "3", "]"}], " ", 
+          RowBox[{"R", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "2", "]"}], ",", "3"}], "]"}], " ", 
+          RowBox[{"Rp", "[", 
+           RowBox[{
+            RowBox[{"a", "[", "3", "]"}], ",", "4"}], "]"}]}]}]]}]}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"F", "[", "1", "]"}], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"G", "[", "1", "]"}]}], "+", 
+      RowBox[{
+       RowBox[{"G", "[", "1", "]"}], " ", 
+       SuperscriptBox[
+        RowBox[{"a", "[", "1", "]"}], "2"], 
+       SuperscriptBox["U", 
+        RowBox[{"-", "1"}]]}]}]}], ";"}], "\[IndentingNewLine]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.845361124338437*^9, 3.8453611408658*^9}, {
+  3.8453612197390003`*^9, 3.845361452173674*^9}, {3.845361482558778*^9, 
+  3.845361600161038*^9}, {3.8453617328320208`*^9, 3.845361901297298*^9}, {
+  3.845364014407013*^9, 3.84536401918957*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubscriptBox["E", "z"], "[", 
+      RowBox[{"r_", ",", "1"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{"G", "[", "1", "]"}], " ", 
+      SuperscriptBox[
+       RowBox[{"a", "[", "1", "]"}], "2"], " ", 
+      SuperscriptBox["U", 
+       RowBox[{"-", "1"}]]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["E", "z"], "[", 
+     RowBox[{"r_", ",", "1"}], "]"}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[ImaginaryI]", " ", "q"}], 
+      RowBox[{"c", " ", "\[Pi]", " ", "k", " ", "\[Epsilon]0", " ", "U"}]], 
+     RowBox[{"Exp", "[", 
+      RowBox[{"\[ImaginaryI]", " ", "k", " ", "z"}], "]"}]}]}], " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["Z", "0"], "=", "377"}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Z", "[", "k_", "]"}], "=", 
+     FractionBox[
+      RowBox[{"-", 
+       SubscriptBox["Z", "0"]}], 
+      RowBox[{"\[Pi]", " ", "k", " ", "U"}]]}]}]}]}]], "Input",
+ CellFrame->{{0, 0}, {3, 0}},
+ CellChangeTimes->{{3.845361918659815*^9, 3.8453619209172573`*^9}, {
+  3.8453620844216623`*^9, 3.84536212406633*^9}, {3.845362173061886*^9, 
+  3.845362245456105*^9}, {3.845362323335731*^9, 3.845362372706773*^9}},
+ EmphasizeSyntaxErrors->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "III. SPECIAL CASES\n",
+ StyleBox["In this section some special cases that follow from the general \
+expressions (13) and (15) are presented.",
+  FontSize->12]
+}], "Section",
+ CellChangeTimes->{{3.8453627106302843`*^9, 3.845362715700238*^9}, {
+  3.845362808060685*^9, 3.84536282612498*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\nSingle layer tube\n",
+ StyleBox["For the single layer cylindrical tube with finite wall thickness \
+(a2 = a3 = a), the general ex- pression for U is modified to following formul \
+where \[Epsilon] and \[Chi]  are the dielectric permeability and radial \
+propagation constant of the tube wall, respectively, a and b are the inner \
+and outer radii of the tube.",
+  FontSize->14,
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsection",
+ CellChangeTimes->{{3.8453627182410107`*^9, 3.8453627240352592`*^9}, {
+  3.845362886765502*^9, 3.84536288843509*^9}, {3.845362918991426*^9, 
+  3.845362987120294*^9}, {3.845364306608652*^9, 3.8453643469349413`*^9}, {
+  3.845364704625751*^9, 3.8453647200555553`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"U", "=", 
+   RowBox[{
+    SuperscriptBox["a", "2"], "-", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", " ", "a", " ", "\[Epsilon]"}], 
+      RowBox[{"\[Chi]", " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], "  ", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"BesselK", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"\[Chi]", " ", "b"}]}], "]"}], " ", 
+        RowBox[{"BesselI", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"\[Chi]", " ", "a"}]}], "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"BesselI", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"\[Chi]", " ", "b"}]}], "]"}], " ", 
+        RowBox[{"BesselK", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"\[Chi]", " ", "a"}]}], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"BesselK", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"\[Chi]", " ", "b"}]}], "]"}], " ", 
+        RowBox[{"BesselI", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"\[Chi]", " ", "a"}]}], "]"}]}], "-", 
+       RowBox[{
+        RowBox[{"BesselI", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"\[Chi]", " ", "b"}]}], "]"}], " ", 
+        RowBox[{"BesselK", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"\[Chi]", " ", "a"}]}], "]"}]}]}]]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["E", "z"], "[", 
+    RowBox[{"r_", ",", "1"}], "]"}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[ImaginaryI]", " ", "q"}], 
+     RowBox[{"c", " ", "\[Pi]", " ", "k", " ", "\[Epsilon]0", " ", "U"}]], 
+    RowBox[{"Exp", "[", 
+     RowBox[{"\[ImaginaryI]", " ", "k", " ", "z"}], "]"}]}]}], " ", 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.845362896209132*^9, 3.845362896264085*^9}, {
+   3.845363011533107*^9, 3.845363034394314*^9}, {3.84536398410198*^9, 
+   3.845364027444639*^9}, 3.845364117898747*^9, {3.8453641542881403`*^9, 
+   3.845364278863308*^9}, {3.845364390157824*^9, 3.845364402918867*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"Infinite", " ", "wall", " ", "thickness"}], 
+   "\[IndentingNewLine]"}], "Subsection"]], "Input",
+ CellChangeTimes->{{3.845364424621793*^9, 3.845364424624867*^9}, {
+   3.84536451233259*^9, 3.8453645138544807`*^9}, 3.8453651025465593`*^9}],
+
+Cell["\<\
+For infinite wall thickness
+(b ->  \[Infinity]), formula (16 - up) coincides with the well - known \
+expression for the impedance derived by Chao
+\
+\>", "Text",
+ CellChangeTimes->{
+  3.8453644063430147`*^9, {3.845364452083295*^9, 3.8453645222857733`*^9}, 
+   3.845364553147235*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"U", "=", 
+    RowBox[{
+     SuperscriptBox["a", "2"], "-", 
+     RowBox[{"2", " ", "a", " ", 
+      FractionBox[
+       RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]", " ", "\[Chi]", " ", 
+        RowBox[{"HankelH1", "[", 
+         RowBox[{"1", ",", 
+          RowBox[{"\[ImaginaryI]", " ", "\[Chi]", " ", "a"}]}], "]"}]}], 
+       RowBox[{
+        SuperscriptBox["k", "2"], 
+        RowBox[{"(", 
+         RowBox[{"\[Epsilon]", "-", "\[Epsilon]0"}], ")"}], 
+        RowBox[{"HankelH1", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"\[ImaginaryI]", " ", "\[Chi]", " ", "a"}]}], 
+         "]"}]}]]}]}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{
+  3.845364557089336*^9, {3.845364662686678*^9, 3.845364677934833*^9}, {
+   3.8453647288037*^9, 3.8453648106454277`*^9}, {3.845364852230941*^9, 
+   3.845364894146047*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Metallic - type layers ", "Subsection"]], "Section",
+ CellChangeTimes->{{3.845365065629929*^9, 3.8453650990895643`*^9}, 
+   3.845365347190915*^9, {3.845366207074313*^9, 3.8453662089592733`*^9}, 
+   3.845366591117117*^9}],
+
+Cell["\<\
+
+ a is the inner radius of the tube, d3 ; d4 are the layers\[CloseCurlyQuote] \
+thickness\
+\>", "Text",
+ CellChangeTimes->{{3.8453672019754963`*^9, 3.845367233558756*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["\[Sigma]", "3"], "/", 
+     SubscriptBox["\[Sigma]", "4"]}], ")"}], 
+   RowBox[{"1", "/", "2"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["U", "1"], "=", 
+   RowBox[{
+    SuperscriptBox["a", "2"], "+", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", " ", "a", " ", 
+       SubscriptBox["\[Epsilon]", "3"]}], 
+      RowBox[{
+       SubscriptBox["\[Chi]", "3"], " ", 
+       SubscriptBox["\[Epsilon]", "0"]}]], " ", 
+     FractionBox[
+      RowBox[{"1", "+", " ", 
+       RowBox[{"\[Alpha]", " ", 
+        RowBox[{"Tanh", "[", 
+         RowBox[{
+          SubscriptBox["\[Chi]", "3"], 
+          SubscriptBox["d", "3"]}], "]"}], " ", 
+        RowBox[{"Tanh", "[", 
+         RowBox[{
+          SubscriptBox["\[Chi]", "4"], 
+          SubscriptBox["d", "4"]}], "]"}]}]}], 
+      RowBox[{
+       RowBox[{"Tanh", "[", 
+        RowBox[{
+         SubscriptBox["\[Chi]", "3"], 
+         SubscriptBox["d", "3"]}], "]"}], "+", 
+       RowBox[{"\[Alpha]", " ", 
+        RowBox[{"Tanh", "[", 
+         RowBox[{
+          SubscriptBox["\[Chi]", "4"], 
+          SubscriptBox["d", "4"]}], "]"}]}]}]]}]}]}], " ", ";"}]}], "Input",
+ CellChangeTimes->{
+  3.8453653658158417`*^9, {3.845366155815637*^9, 3.845366172278079*^9}, {
+   3.8453662160850058`*^9, 3.845366224159334*^9}, {3.8453665846748*^9, 
+   3.845366948932082*^9}, {3.845367120404778*^9, 3.845367120899736*^9}}],
+
+Cell["\<\
+
+For the single layer tube (\[Alpha]=1) with wall thickness d and dielectric \
+permeability x, up formula takes following form :\
+\>", "Text",
+ CellChangeTimes->{{3.845367020235292*^9, 3.845367101318391*^9}, 
+   3.8453671682308407`*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["U", "2"], "=", 
+    RowBox[{
+     SuperscriptBox["a", "2"], "+", 
+     RowBox[{"2", " ", 
+      FractionBox[
+       RowBox[{"a", " ", "\[Epsilon]"}], 
+       RowBox[{"\[Epsilon]0", " ", "\[Chi]"}]], 
+      RowBox[{"Catch", "[", 
+       RowBox[{"\[Chi]", " ", "d"}], "]"}]}]}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.845367103954775*^9, 3.8453671782095013`*^9}, {
+  3.8453672427462683`*^9, 3.845367286919072*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Ceramic pipe", "Subsection"]], "Section",
+ CellChangeTimes->{{3.845367341957892*^9, 3.845367401167165*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   StyleBox[
+    RowBox[{"ceramic", " ", "pipe", " ", "with", " ", "metallic", " ", 
+     RowBox[{"coating", ".", "The"}], " ", "permeability", " ", "of", " ", 
+     "ceramic", " ", "is", " ", "given", " ", "by", " ", "\[Epsilon]"}], 
+    "Text"],
+   FontWeight->"Plain"], 
+  StyleBox[
+   StyleBox["=", "Text"],
+   FontWeight->"Plain"], 
+  RowBox[{
+   StyleBox[
+    SubscriptBox[
+     StyleBox["\[Epsilon]", "Text"], "0"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    SuperscriptBox["n", "2"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[
+     StyleBox[
+      RowBox[{" ", " "}]], "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["with", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["n", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["the", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["refraction", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[
+     RowBox[{"index", ".", "The"}], "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["radial", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["propagation", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["constant", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["in", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["ceramic", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["material", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["without", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["losses", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox[" ", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[
+    StyleBox["is", "Text"],
+    FontWeight->"Plain"], 
+   StyleBox[" ",
+    FontWeight->"Plain"], "the", " ", "imaginary", " ", "quantity", " ", 
+   "and", " ", "equal", " ", "to"}]}]], "Text",
+ CellChangeTimes->{
+  3.845367403419057*^9, {3.845367457911414*^9, 3.8453675817884502`*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.845367592189777*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{961, 911},
+WindowMargins->{{Automatic, 675}, {Automatic, 65}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 125, 1, 93, "Title"],
+Cell[708, 25, 86, 1, 23, "Author"],
+Cell[797, 28, 1141, 35, 44, "Institution"],
+Cell[1941, 65, 89, 1, 24, "InlineFormula"],
+Cell[CellGroupData[{
+Cell[2055, 70, 173, 3, 65, "Section"],
+Cell[2231, 75, 5635, 170, 341, "Input"],
+Cell[7869, 247, 2598, 72, 131, "Input"],
+Cell[10470, 321, 1339, 38, 185, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11846, 364, 307, 7, 83, "Section"],
+Cell[CellGroupData[{
+Cell[12178, 375, 713, 13, 126, "Subsection"],
+Cell[12894, 390, 2017, 57, 133, InheritFromParent],
+Cell[14914, 449, 286, 6, 70, "Input"],
+Cell[15203, 457, 291, 8, 77, "Text"],
+Cell[15497, 467, 912, 24, 107, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16458, 497, 244, 3, 56, "Section"],
+Cell[16705, 502, 181, 5, 55, "Text"],
+Cell[16889, 509, 1488, 44, 86, "Input"],
+Cell[18380, 555, 246, 6, 55, "Text"],
+Cell[18629, 563, 504, 14, 78, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19170, 582, 131, 1, 56, "Section"],
+Cell[19304, 585, 2795, 111, 56, "Text"],
+Cell[22102, 698, 87, 1, 55, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
